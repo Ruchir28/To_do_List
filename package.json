@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "to do list app ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruchir28/To_do_List.git"
+  },
+  "author": "Ruchir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ruchir28/To_do_List/issues"
+  },
+  "homepage": "https://github.com/Ruchir28/To_do_List#readme"
+}
