@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Ruchir28/To_do_List/issues"
   },
-  "homepage": "https://github.com/Ruchir28/To_do_List#readme"
+  "homepage": "https://github.com/Ruchir28/To_do_List#readme",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7"
+  }
 }

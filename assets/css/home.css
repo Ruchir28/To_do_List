@@ -1,0 +1,162 @@
+#head-name
+{
+    text-align: center;
+    
+}
+
+#form-container
+{
+    position: relative;
+    left: 50px;
+    width: 40%;
+}
+.custin
+{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.custin input
+{
+    width: 100%;
+    height: 100%;
+    border: none;
+    /* border: 1px solid lightgrey;
+    border-radius: 5px; */
+    padding: 5px;
+    padding-top: 18px;
+    font-size: 14px;
+    outline: none;
+    
+   
+    
+}
+.custin label
+{
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   
+   font-family: cursive;
+   color: red;
+
+  
+   border-bottom: 1px solid black;
+ /* top:-1px; */
+   
+   margin: 0px;
+   left: 0px;
+}
+.div-date label .content-name
+{
+top:2px;
+}
+.custin label::after
+{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    border-bottom: 2px solid #5fa8d3;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+}
+.content-name
+{
+    position:absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+}
+.custin input:focus + .label-name .content-name , input:valid + .label-name .content-name
+{
+    transform: translateY(-60%);
+    color: #5fa8d3;
+}
+.custin input:focus + .label-name::after, input:valid + .label-name::after
+{
+    transform: translateX(0%);
+    color: #5fa8d3;
+}
+.task-card
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid  rgba(0,0,0,.03);
+   
+    overflow: hidden;
+    
+}
+.task-card > .card-Desc
+{
+    font-family: cursive;
+    background-color: rgba(0,0,0,.03);
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+   
+}
+
+.task-card .card-body
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.task-card .card-body a
+{
+    /* position: absolute;
+    right: 10%; */
+}
+.high
+{
+    background-color:red;
+    border: none;
+}
+.medium
+{
+    background-color:green;
+    border: none;
+}
+.low
+{
+    background-color:yellow;
+    border: none;
+}
+.input-select
+{
+    width: 100%;
+    height: 50px;
+    border: none !important;
+    outline: none;
+}
+.label-priority
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: none !important;
+}
+.span-label
+{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    margin-top: 10px;
+transition: all 0.3s ease-in-out;
+}
+.custin select:focus + .label-priority .span-label , select:invalid + .label-priority .span-label
+{
+    transform: translateY(-15%);
+    color: #5fa8d3;
+}
+.delete-pos
+{
+    margin-left: 20px;
+    margin-top: 10px;
+}

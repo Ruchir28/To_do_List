@@ -1,0 +1,86 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+<body>
+    <h1 class="alert alert-warning" id="head-name"><strong >To-Do-App</strong></h1>
+    <div class="container">
+
+  <div id="form-container">
+  <form action="/task/create" method="POST" id="form-id">
+    <div class="row">
+      
+      <div class="custin">
+       <!-- <textarea name="task-desc" class="form-control">Enter Task Description</textarea> -->
+      
+        <input required class="input-name" type="text" name="Task_Description"  autocomplete="off">
+        <label for="Task_Description" class="label-name"><span class="content-name">Enter Task Description</span></label> 
+      
+      </div>
+      <!-- <div  class="custin" style="margin-top: 5px; margin-right: 0px;">
+        <input required class="input-name" type="text" name="Priority" style="color: coral;"  autocomplete="off">
+        <label for="due" class="label-name"><span class="content-name">Enter Priority</span></label> 
+      </div> -->
+      <div class="custin">
+        <!-- <textarea name="task-desc" class="form-control">Enter Task Description</textarea> -->
+       
+         <select required class="input-select" style="margin-top: 15px;"id="select-priority" name="Priority">
+          <option disabled ></option> 
+          <option>high</option>
+           <option>medium</option>
+           <option>low</option>
+          </select>
+         <label for="priority" class="label-priority"><span class="span-label">Priority</span></label> 
+       
+       </div>
+      <div class="custin div-date" style="margin-top:-10px;width: 100%;">
+       <input required class="input-name" type="date" name="Due_Date"  autocomplete="off">
+       <label for="due" class="label-name"><span class="content-name" style="color: coral;">Enter Due Date</span></label> 
+      </div>
+      <button type="submit" class="btn btn-success" style="margin-top:10px;">Add Task +</button>
+      <button type="button" id="delete-button" class="btn btn-danger delete-pos">Delete-Task</button>
+    </div>
+    
+  </form>
+ 
+</div>
+
+<div id="task-container">
+
+  <div class="task-card">
+   
+    <h5 class="card-Desc">Task 1</h5>
+    <div class="card-body">
+      
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">Due Date</p>
+      <a href="" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <% for(task of tasks) { %>
+    <div class="task-card" id="task-<%= task._id %>">
+    <h5 class="card-Desc"><%= task.Desc %></h5>
+      <div class="card-body">
+        <input id="to-delete" type="checkbox" value="<%= task._id %>">
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><%=  task.Date %></p>
+        <button class="btn btn-primary <%= task.priority %>" ><%= task.priority %></button>
+      </div>
+    </div>
+    <%}%> 
+
+</div>
+
+</div>
+
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js">
+</script>
+<script src="/js/create_task.js">
+</script>
+
+
+</html>
